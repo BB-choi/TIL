@@ -1,0 +1,22 @@
+{
+  "name": "til",
+  "description": "Today I Learned",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BB-choi/TIL.git"
+  },
+  "author": "BB-choi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BB-choi/TIL/issues"
+  },
+  "homepage": "https://github.com/BB-choi/TIL#readme",
+  "devDependencies": {
+    "vuepress": "^1.9.7"
+  }
+}
