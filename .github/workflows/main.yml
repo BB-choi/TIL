@@ -9,6 +9,9 @@ jobs:
 
       - name: Vuepress deploy
         uses: jenkey2011/vuepress-deploy@1.0.1
+        with:
+          node-version: "16"
+          cache: "yarn"
         env:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BUILD_SCRIPT: yarn && yarn build
