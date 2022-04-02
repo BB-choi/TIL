@@ -10,11 +10,39 @@ h1 {
   font-weight: 800;
 }
 
+code, kbd, .line-number {
+  font-family: 'Noto Sans KR', sans-serif;
+  
+}
+
 
 .theme-container.custom-page-class {
+    .title-area h1 {
+    background-color: #ffcb1f;
+    text-align: right;
+    word-wrap: break-word;
+    font-family: "Press Start 2P";
+    padding: 1rem;
+  }
+
   .last-updated {
     .prefix, .time{
       color: transparent;
+    }
+  }
+
+  .thisMonth-page-link a {
+    color: $textColor;
+    
+    &:hover{
+      text-decoration: underline;
+      color: $accentColor;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .title-area h1 {
+      font-size: 1.6rem;
     }
   }
 }

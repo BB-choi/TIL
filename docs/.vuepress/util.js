@@ -10,4 +10,18 @@ module.exports = {
       (el) => `${dir1}${dir2 ? "/" + dir2 : ""}/${el.toString()}`
     );
   },
+  getThisMonthArr: () => {
+    const thisMonth = "2022-04";
+    const thisMonthPages = [];
+
+    for (const page of this.$site.pages) {
+      for (const idx in page.frontmatter.tags) {
+        if (page.frontmatter.tags[idx] === thisMonth) {
+          thisMonthPages.push(page);
+        }
+      }
+    }
+
+    return thisMonthPages;
+  },
 };
