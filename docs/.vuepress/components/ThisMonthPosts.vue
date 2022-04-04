@@ -1,9 +1,7 @@
 <template>
   <div>
     <div v-if="thisMonthPages">
-      <h2 :id="thisMonth">
-        {{ thisMonth }}
-      </h2>
+      <h2 :id="thisMonth">{{ thisMonth }}</h2>
       <ul>
         <li class="thisMonth-page-link" v-for="page in thisMonthPages">
           <router-link :to="{ path: page.path }">{{ page.title }}</router-link>

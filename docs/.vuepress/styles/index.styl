@@ -10,9 +10,31 @@ h1 {
   font-weight: 800;
 }
 
-code, kbd, .line-number {
-  font-family: 'Noto Sans KR', sans-serif;
-  
+h1 a.header-anchor,
+h2 a.header-anchor,
+h3 a.header-anchor,
+h4 a.header-anchor,
+h5 a.header-anchor,
+h6 a.header-anchor {
+  color: $accentColor;
+  text-decoration: none;
+}
+
+
+.page a {
+  color: $textColor;
+  text-decoration: underline;
+
+  &:hover {
+    color: $accentColor;
+  }
+}
+
+code[class*="language-"],
+pre[class*="language-"],
+pre[class*="language-"] span,
+kbd, .line-number {
+  font-family: 'Consolas','Noto Sans KR', sans-serif;
 }
 
 
@@ -31,13 +53,17 @@ code, kbd, .line-number {
     }
   }
 
-  .thisMonth-page-link a {
+  .recent-posts a {
     color: $textColor;
     
     &:hover{
       text-decoration: underline;
       color: $accentColor;
     }
+  }
+
+  .info-area {
+    text-align: right;
   }
 
   @media (max-width: 500px) {

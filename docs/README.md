@@ -3,4 +3,4 @@ pageClass: custom-page-class
 ---
 
 <Home/>
-<HomeLinks/>
+<RecentPosts/>
