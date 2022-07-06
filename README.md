@@ -19,7 +19,7 @@ yarn build
 
 ## 배포
 
-`master`브랜치에 push시 자동 배포 (.github/workflows/main.yml)
+`master`브랜치에 push시 자동 배포 ([.github/workflows/main.yml](https://github.com/BB-choi/TIL/blob/master/.github/workflows/main.yml))
 
 ## 수동배포
 
