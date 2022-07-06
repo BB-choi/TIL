@@ -10,11 +10,19 @@ module.exports = {
     lastUpdated: "마지막 수정일",
     sidebar: [
       {
+        title: "2022-07",
+        children: util.getFileArr("til", "22-07"),
+      },
+      {
+        title: "2022-05",
+        children: util.getFileArr("til", "22-05"),
+      },
+      {
         title: "2022-04",
         children: util.getFileArr("til", "22-04"),
       },
       {
-        title: "Javascript",
+        title: "JavaScript",
         children: util.getFileArr("javascript"),
       },
     ],
