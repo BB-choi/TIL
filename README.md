@@ -2,6 +2,8 @@
 
 https://BB-choi.github.io/TIL/
 
+![Today BB Learned](https://user-images.githubusercontent.com/78826879/178685585-da87e96a-cec5-4495-9b4f-f5c1a956f9a8.png)
+
 @BB-choi
 
 ## 실행 (로컬)
