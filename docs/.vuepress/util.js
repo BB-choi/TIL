@@ -10,8 +10,8 @@ module.exports = {
       (el) => `${dir1}${dir2 ? "/" + dir2 : ""}/${el.toString()}`
     );
   },
-  getThisMonthArr: () => {
-    const thisMonth = "2022-04";
+  getThisMonthArrDesc: () => {
+    const thisMonth = "2022-07";
     const thisMonthPages = [];
 
     for (const page of this.$site.pages) {
@@ -22,6 +22,6 @@ module.exports = {
       }
     }
 
-    return thisMonthPages;
+    return thisMonthPages.sort((a, b) => b.localeCompare(a));
   },
 };

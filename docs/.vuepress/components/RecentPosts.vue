@@ -1,8 +1,8 @@
 <template>
   <div class="recent-posts">
-    <h2>최근 글</h2>
-    <ul v-if="recentPosts">
-      <li v-for="post in recentPosts">
+    <h2 class="title">📝 Recent Posts</h2>
+    <ul v-if="recentPosts" class="list">
+      <li v-for="post in recentPosts" v-bind:key="post.path">
         <router-link :to="{ path: post.path }">{{ post.title }}</router-link>
       </li>
     </ul>
@@ -10,6 +10,7 @@
 </template>
 
 <script>
+const POST_COUNT = 5;
 export default {
   data() {
     return {};
@@ -18,10 +19,8 @@ export default {
     recentPosts() {
       const posts = this.$site.pages
         .filter((post) => post.path !== "/")
-        .sort((a, b) => {
-          b.lastUpdatedStamp - a.lastUpdatedStamp;
-        })
-        .slice(0, 5);
+        .sort((a, b) => new Date(b.lastUpdated) - new Date(a.lastUpdated))
+        .slice(0, POST_COUNT);
 
       return posts;
     },
