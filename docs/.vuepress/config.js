@@ -7,7 +7,6 @@ module.exports = {
   head: [["link", { rel: "icon", href: `/images/logo-144.png` }]],
   themeConfig: {
     nav: [{ text: "GitHub", link: "https://github.com/bb-choi" }],
-    lastUpdated: "마지막 수정일",
     sidebar: [
       {
         title: "2022-07",
