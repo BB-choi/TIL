@@ -19,7 +19,7 @@ export default {
       const POST_COUNT = 5;
       const now = new Date();
 
-      const getMonthTag = (date) => {
+      const getPostsByMonthTag = (date) => {
         return date.toISOString().slice(2, 7); // "22-07"
       };
 
@@ -29,17 +29,21 @@ export default {
         );
       };
 
-      const thisMonth = getMonthTag(now);
-      let recentPosts = getRecentPosts(thisMonth);
+      const thisMonthPosts = getPostsByMonthTag(now);
+      let recentPosts = [...getRecentPosts(thisMonthPosts)];
 
       const year = now.getFullYear();
       const month = now.getMonth();
       const day = now.getDate();
+      const GMTSeoul = 9;
 
-      while (!recentPosts.length) {
-        recentPosts = getRecentPosts(
-          new Date(year, month - 1, day).toISOString().slice(2, 7)
-        );
+      while (recentPosts.length < POST_COUNT) {
+        recentPosts = [
+          ...recentPosts,
+          ...getRecentPosts(
+            getPostsByMonthTag(new Date(year, month - 1, day, GMTSeoul))
+          ),
+        ];
       }
 
       const slicedRecentPosts = recentPosts
