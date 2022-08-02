@@ -5,6 +5,7 @@ module.exports = {
   description: "Today I Learned",
   base: "/TIL/",
   head: [["link", { rel: "icon", href: `/images/logo-144.png` }]],
+  cache: false,
   themeConfig: {
     nav: [{ text: "GitHub", link: "https://github.com/bb-choi" }],
     sidebar: [
