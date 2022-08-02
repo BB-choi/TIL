@@ -24,9 +24,7 @@ export default {
       };
 
       const getRecentPosts = (month) => {
-        return this.$site.pages.filter((page) =>
-          page.frontmatter.tags?.includes(month)
-        );
+        return this.$site.pages.filter((post) => post.path.includes(month));
       };
 
       const thisMonthPosts = getPostsByMonthTag(now);
@@ -46,8 +44,17 @@ export default {
         ];
       }
 
+      const getCreationDateFromMeta = (meta) => {
+        const [{ content }] = meta.filter(({ name }) => name === CREATION_DATE);
+        return content;
+      };
+
+      const CREATION_DATE = "created-at";
+
       const slicedRecentPosts = recentPosts
-        .sort(({ title: a }, { title: b }) => b.localeCompare(a))
+        .sort(({ frontmatter: { meta: a } }, { frontmatter: { meta: b } }) =>
+          getCreationDateFromMeta(b).localeCompare(getCreationDateFromMeta(a))
+        )
         .slice(0, POST_COUNT);
 
       return slicedRecentPosts;

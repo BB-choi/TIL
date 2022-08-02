@@ -2,6 +2,8 @@
 meta:
   - name: og:title
     content: Fetch와 Axios의 차이
+  - name: created-at
+    content: 22-04-09
 tags: ["axios", "fetch"]
 ---
 

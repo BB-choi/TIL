@@ -9,6 +9,10 @@ module.exports = {
     nav: [{ text: "GitHub", link: "https://github.com/bb-choi" }],
     sidebar: [
       {
+        title: "2022-08",
+        children: util.getFileArr("til", "22-08"),
+      },
+      {
         title: "2022-07",
         children: util.getFileArr("til", "22-07"),
       },
